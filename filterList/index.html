@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Javascript Filters</title>
+  </head>
+  <body>
+    <div id="container" class="container mt-4">
+      <form id="form-filters">
+        <input id="userInput" type="text" class="form-control" />
+        <button id="search" class="btn btn-warning">
+          Search
+        </button>
+        <button id="sort" class="btn btn-warning">
+          Sort
+        </button>
+        <button id="add" class="btn btn-primary">Add</button>
+      </form>
+      <div id="states-list">
+        <ul id="list"></ul>
+      </div>
+    </div>
+    <script src="filters.js"></script>
+    <script>
+      let users = axios
+        .get("https://jsonplaceholder.typicode.com/users")
+        .then(response => {
+          let x = response.data;
+          x.map(y => {
+            let list = document.querySelector("#list");
+            list.innerHTML += `<li>${y.name}</li>`;
+          });
+        });
+
+      let filterName = document.querySelector("#userInput");
+      filterName.addEventListener("keyup", getFilterName);
+      let sortList = document.querySelector("#sort");
+      sortList.addEventListener("click", sortListFn);
+
+      function getFilterName() {
+        let filterValue = document
+          .querySelector("#userInput")
+          .value.toUpperCase();
+
+        let namesList = document.querySelectorAll("#list li");
+        console.log(namesList);
+        namesList.forEach(names => {
+          if (names.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+            // names.style.display = "";
+            return;
+          } else {
+            names.style.display = "none";
+          }
+        });
+      }
+
+      function sortListFn() {
+        let namesList = document.querySelectorAll("#list li");
+        console.log(namesList);
+        namesList.sort(function(a, b) {
+          console.log(a, b);
+          if (a < b) {
+            return -1;
+          }
+          if (a > b) {
+            return 1;
+          }
+          return 0;
+        });
+      }
+    </script>
+  </body>
+</html>

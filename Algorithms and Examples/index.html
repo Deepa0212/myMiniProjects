@@ -1,0 +1,234 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- <script src='main.js'></script> -->
+    <!-- <script src='data.js'></script> -->
+    <!-- <script src="jsBasicSolutions.js"></script> -->
+    <!-- <script src="arrayFunc.js"></script> -->
+    <script src="practice2.js"></script>
+    <!-- <script src="circleInaDiv.js"></script> -->
+    <!-- <script src="deepa.js"></script> -->
+    <!-- <script src="Example_looping_Array_Object.js"></script> -->
+    <!-- <script src="calculator.js"></script> -->
+    <style>
+      /* .navBar {
+        float: left;
+        width: 25%;
+      }
+      .content {
+        float: left;
+        width: 75%;
+        padding: 15px;
+      }
+      .header,
+      .footer {
+        height: 100px;
+        padding: 10px;
+        background-color: darkolivegreen;
+      }
+      .footer {
+        position: sticky;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        padding: 6px;
+        margin-bottom: 5px;
+        background-color: #ddd;
+        list-style-type: none;
+      }
+      .navBar li:hover {
+        background-color: #bbb;
+      }
+      .boxContent {
+        /* width: 50%; */
+      /* display: inline-block;
+        /* float: left; */
+      /* border: 2px solid #ccc;
+        margin: 1px;
+      }
+      .flexbox {
+        display: flex;
+        flex-wrap: none;
+      } 
+      .flex {
+        display: flex;
+        width: auto;
+        height: auto;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        background-color: aqua;
+      }
+      .one {
+        padding: 20px;
+        margin: 5px;
+        text-align: center;
+        border: 1px solid #bbb;
+
+        background-color: whitesmoke;
+      }
+      #one {
+        position: absolute;
+        display: inline-block;
+        background-color: whitesmoke;
+        border: 1px solid #000;
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+        margin: 5px;
+        float: left;
+      }
+      #two {
+        position: absolute;
+        display: inline-block;
+        background-color: whitesmoke;
+        border: 1px solid #000;
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+        margin-left: 105px;
+        float: left;
+      }
+      #three {
+        position: relative;
+        display: inline-block;
+        background-color: whitesmoke;
+        border: 1px solid #000;
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+        margin: 210px;
+        float: left;
+      }
+      #four {
+        position: relative;
+        display: inline-block;
+        background-color: whitesmoke;
+        border: 1px solid #000;
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+      }
+      .mainDiv {
+        background-color: aqua;
+        height: 500px;
+        width: 500px;
+      }*/
+      .content {
+        padding: 15px;
+      }
+      .header,
+      .footer {
+        padding: 3px;
+        background-color: aqua;
+        text-align: center;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        padding: 6px;
+        margin-bottom: 5px;
+        background-color: #ddd;
+        list-style-type: none;
+      }
+      .navBar li:hover {
+        background-color: #bbb;
+      }
+      .boxContent {
+        border: 1px solid #ccc;
+        margin: 1px;
+        border-radius: 3px;
+        padding: 5px;
+      }
+      .boxContent p {
+        font-size: 12px;
+      }
+      /* .flexbox {
+        display: flex;
+        flex-wrap: none;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <!-- <div class="container-fluid">
+      <div class="header"><h2>HTML Project</h2></div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 navBar">
+          <ul>
+            <li>Home</li>
+            <li>New</li>
+            <li>Career</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-9 content ">
+          <div class="boxContent">
+            <h3>Summary</h3>
+            <p>
+              This is some text to make sure that the content gets really tall.
+              This is some text to make sure that the content gets really tall.
+            </p>
+          </div>
+          <div class="boxContent">
+            <h3>Summary</h3>
+            <p>
+              This is some text to make sure that the content gets really tall.
+              This is some text to make sure that the content gets really tall.
+            </p>
+          </div>
+          <div class="boxContent">
+            <h3>Summary</h3>
+            <p>
+              This is some text to make sure that the content gets really tall.
+              This is some text to make sure that the content gets really tall.
+            </p>
+
+            <p>
+              This is some text to make sure that the content gets really tall.
+              This is some text to make sure that the content gets really tall.
+            </p>
+
+            <p>
+              This is some text to make sure that the content gets really tall.
+              This is some text to make sure that the content gets really tall.
+            </p>
+          </div>
+          <div class="boxContent">
+            <h3>Summary</h3>
+            <p>
+              This is some text to make sure that the content gets really tall.
+              This is some text to make sure that the content gets really tall.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer">deepa.pattar@gmail.com</div>
+    </div> -->
+  </body>
+  <script src="test.js"></script>
+</html>

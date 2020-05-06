@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Javascript Calculator App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="display">
+        <div data-previous-operand class="previous-operand"></div>
+        <div data-current-operand class="current-operand"></div>
+      </div>
+      <div class="keypad">
+        <button data-all-clear class="key">AC</button>
+        <button data-operator class="key">*</button>
+        <button data-operator class="operator key">%</button>
+        <button data-operator class="operator key">/</button>
+        <button data-number class="key">7</button>
+        <button data-number class="key">8</button>
+        <button data-number class="key">9</button>
+        <button data-operator class="key">6</button>
+        <button data-number class="key">4</button>
+        <button data-operator class="operator key">+</button>
+        <button data-number class="key">1</button>
+        <button data-number class="key">2</button>
+        <button data-number class="key">3</button>
+        <button data-number class="key">5</button>
+        <button data-number class="key">0</button>
+        <button data-number class="key">.</button>
+        <button data-delete class="key">Del</button>
+        <button data-equals class="key">=</button>
+        <table>
+          <tbody>
+            <tr></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
